@@ -13,23 +13,6 @@ pygame.mixer.init(frequency=22050, size=-16, channels=2, buffer=4096)
 
 
 class player:
-    x = int
-    y = int
-    angle = float
-    velocityH = float
-    velocityV = float
-    velocity = float
-    friction = float
-    
-    vmax = float
-    accelH = float
-    accelV = float
-    shoot = None
-    death = None
-    dead = bool
-    score = int
-
-    I = int
     def __init__(self,sx,sy):
         self.score = 0
         self.dead = False
@@ -132,10 +115,6 @@ class player:
         self.dead = True
 
 class bullet:
-    x = int
-    y = int
-    angle = float
-    speed = int
     def __init__(self,pos,sangle):
         self.x = pos[0]
         self.y = pos[1]
@@ -160,14 +139,6 @@ class bullet:
         pygame.draw.line(screen,white,p1,p2,1)
 
 class asteroid:
-    x = int
-    y = int
-    angle = float
-    speed = int
-    Points = []
-    size = int
-    I = int
-    explode = None
     def __init__(self,sx,sy,ssize,sangle):
         self.I = 0
         self.x = sx
